@@ -1,0 +1,137 @@
+<html>
+    <head>
+        <title>Memorable | Editor</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=BenchNine&family=Open+Sans&family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css" integrity="sha512-O03ntXoVqaGUTAeAmvQ2YSzkCvclZEcPQu1eqloPaHfJ5RuNGiS4l+3duaidD801P50J28EHyonCV06CUlTSag==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.js" integrity="sha512-OmBbzhZ6lgh87tQFDVBHtwfi6MS9raGmNvUNTjDIBb/cgv707v9OuBVpsN6tVVTLOehRFns+o14Nd0/If0lE/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	    <script>
+	      const firebaseConfig = {
+	        apiKey: "AIzaSyCNePrUJkKixB2bMhPvfHpDabmUcspKQzc",
+	        authDomain: "evernote-cc43d.firebaseapp.com",
+	        databaseURL: "https://evernote-cc43d-default-rtdb.firebaseio.com",
+	        projectId: "evernote-cc43d",
+	        storageBucket: "evernote-cc43d.appspot.com",
+	        messagingSenderId: "208113243232",
+	        appId: "1:208113243232:web:2d56f53e23be0c5adc1f05"
+	      };
+	      
+	      firebase.initializeApp(firebaseConfig);
+	    </script>
+        <link rel="icon" type="image/x-icon" href="../favicon.png.png">
+        <script src="script.js" defer></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.css"/>
+        <script src="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.js"></script>
+        <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+    </head>
+    <body>
+        <div id="sidebar">
+            <img id="sbo1" src="Icons/user.png" />
+            <img id="sbo2" src="Icons/plus.png" />
+            <img id="sbo3" src="Icons/globe.png" />
+            <img id="sbo4" src="Icons/moon.png" />
+            <img id="sbo5" src="Icons/chip.png" />
+            <img id="sbo6" src="Icons/sign-out.png" />
+        </div>
+        <div id="notescont">
+            <p id="head">Your Notes</p>
+            <p id="numnotes">0 notes</p>
+            <input id="search" placeholder="Search" />
+            <div id="notes">
+                <div id="blueprint" class="note">
+                    <!--Name of Note-->
+                    <p>Name of Note</p>
+                    <!--Summary-->
+                    <h5>Here will be the summary of the note. It will contain upto about 20 words at max</h5>
+                    <!--Date Written-->
+                    <h6>Date</h6>
+                    <!--View Summary-->
+                    <img id="i1" src="Icons/report-card.png" />
+                    <!--Delete note-->
+                    <img id="i2" src="Icons/trash-bin.png" />
+                </div>
+            </div>
+            <div id="cover_empty">
+                <p>Add Notes</p>
+                <br>
+                <img src="Icons/sticky.png" />
+            </div>
+        </div>
+        <div id="editorcont">
+            <div id="options">
+                <div id="type" class="type">
+                    Choose Type ▼
+                    <div class="drop">
+                        <p id="h1">Heading</p>
+                        <p id="h2">Sub-Heading</p>
+                        <p id="h3">Medium Heading</p>
+                        <p id="h4">Pointer</p>
+                        <p id="p">Paragraph</p>
+                    </div>
+                </div>
+                <div id="fonts" class="type">
+                    Choose Font ▼
+                    <div class="drop">
+                        <p class="fn1">Arial</p>
+                        <p class="fn2">Open Sans</p>
+                        <p class="fn3">Times New Roman</p>
+                        <p class="fn4">Calibri</p>
+                        <p class="fn5">Helvetica</p>
+                    </div>
+                </div>
+                <div class="type" id="size">
+                    1▼
+                    <div class="drop">
+                        <p id="1">1</p>
+                        <p id="2">2</p>
+                        <p id="3">3</p>
+                        <p id="4">4</p>
+                        <p id="5">5</p>
+                        <p id="6">6</p>
+                        <p id="7">7</p>
+                    </div>
+                </div>
+                <span id="color_front"></span>
+                <input type="color" id="choose_color" value="#000000" />
+                <span id="bgcolor_front"></span>
+                <input type="color" id="choose_bgcolor" value="#ffffff" />
+                <img src="Options/bold.png" />
+                <img src="Options/italic.png" />
+                <img src="Options/text-slash.png" />
+                <img src="Options/underline.png" />
+                <img src="Options/list.png" />
+                <img src="Options/list (1).png" />
+                <img src="Options/redo.png" />
+                <img src="Options/undo.png" />
+                <div id="more">
+                </div>
+                <button id="quote">Add Blockquote</button>
+                <img src="Options/table-grid.png" />
+                <img src="Options/align-left.png" />
+                <img src="Options/align-center.png" />
+                <img src="Options/align-right.png" />
+                <img src="Options/subscript.png" />
+                <img src="Options/superscript.png" />
+                <img src="Options/picture.png" />
+                <img src="Options/video.png" />
+                <img src="Options/link.png" />
+            </div>
+            <input type="text" placeholder="Enter Title..." id="title" />
+            <div id="editor">
+                <div id="content" contenteditable="true"></div>
+            </div>
+        </div>
+        <input type="button" id="save" value="Save" onclick="save()" /> 
+        <input type="button" id="down" value="Download" onclick="generatePDF()" />
+        <div id="ai_holder">
+            <input type="text" placeholder="Enter prompt" id="prompt" />
+            <p id="response">Response will appear here...</p>
+        </div>
+    </body>
+</html>

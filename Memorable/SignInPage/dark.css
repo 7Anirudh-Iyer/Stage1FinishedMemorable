@@ -1,0 +1,175 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(0, 0, 30);
+}
+.decor {
+    margin: 0;
+    position: fixed;
+    width: 0;
+    height: 0;
+    border-left: 20vw solid rgb(0, 0, 30);
+    border-bottom: 20vw solid transparent;
+    transform: rotateZ(180deg);
+}
+.decor1 {
+	margin: 0;
+	position: fixed;
+	width: 20vw;
+	height: 20vw;
+	transform: rotateZ(180deg);
+    filter: invert(1);
+}
+#centerit {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+}
+#signInBox {
+  background-color: black;
+  width: 30vw;
+  height: 70vh;
+  margin: auto;
+  margin-top: 17.5vh;
+  margin-left: 20vw;
+  box-shadow: 0px 0px 30px 2px #2f01ad;
+  /* border: solid 0.2vh grey; */
+  border-radius: 10px;
+  z-index: 2;
+}
+.input_text{
+  margin-left: 2.5vw;
+  position: absolute;
+  width: 25vw;
+  height: 6vh;
+  margin-top: 5vh;
+  color: white;
+  background-color: #03014e;
+  border: none;
+  border-radius: 5px;
+  padding-left: 1vw;
+  font-family: 'work-sans'
+}
+.input_text:focus {
+  border: solid 0.2vh rgb(97, 111, 231);
+}
+#login {
+  font-family: 'benchnine';
+  text-align: center;
+  padding-top: 5vh;
+  font-size: 1.7vw;
+  color: white;
+}
+#why-not {
+  position: absolute;
+  margin-top: 25vh;
+  margin-left: 11.5vw;
+  color: rgb(160, 160, 160);
+  font-size: 1.6vh;
+  text-decoration: underline;
+}
+#signup{
+  background-color: #1e5900;
+  color: white;
+  border: none;
+  position: absolute;
+  border-radius: 5px;
+  margin-top: 30vh;
+  margin-left: 5vh;
+  width: 25vw;
+  height: 5vh;
+  cursor: pointer;
+  font-family: 'spirax';
+}
+.enter:hover {
+  transition: 0.5s;
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 20px 5px rgb(50, 50, 50);
+}
+#signin{
+  background-color:#1e5900;
+  position: absolute;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 40vh;
+  margin-left: 5vh;
+  width: 25vw;
+  height: 5vh;
+  cursor: pointer;
+  font-family: 'spirax';
+}
+#carousel {
+  position: absolute;
+  margin: auto;
+  margin-left: 55vw;
+  margin-top: 27.5vh;
+  width: 30vw;
+  height: 50vh;
+}
+#slide1 {
+  display: grid;
+  grid-template-rows: auto auto;
+  width: 30vw;
+  height: 40vh;
+  border-radius: 5px;
+  box-shadow: 0px 0px 30px 2px #2f01ad;
+}
+#slide2 {
+  display: none;
+  grid-template-rows: auto auto;
+  width: 30vw;
+  height: 40vh;
+  border-radius: 5px;
+  box-shadow: 0px 0px 30px 2px #2f01ad;
+}
+.icon1 {
+  width: 15vw;
+  height: auto;
+  padding: 0;
+  margin: auto;
+}
+.icon_text {
+  font-family: 'BenchNine';
+  font-size: 2vh;
+  padding-top: 2.5vh;
+  padding-left: 4vw;
+  padding-right: 4vw;
+  margin-top: 0;
+  text-align: center;
+  color: rgb(177, 177, 177);
+}
+#changeto1 {
+  width: 0.57vw;
+  height: 0.57vw;
+  border-radius: 100%;
+  background-color: black;
+  position: absolute;
+  margin-top: 73vh;
+  margin-left: 68.5vw;
+  filter: invert(1);
+}
+#changeto2 {
+  width: 0.57vw;
+  height: 0.57vw;
+  border-radius: 100%;
+  background-color: grey;
+  position: absolute;
+  margin-top: 73vh;
+  margin-left: 70.5vw;
+  filter: invert(1);
+}
+#signInBoxP {
+  display: none;
+  background-color: azure;
+  width: 70%;
+  height: 70%;
+  margin-left: 15%;
+  box-shadow: 2px 2px 3px #333329;
+  border-color: white;
+  border-radius: 10px;
+  z-index: 1;
+}

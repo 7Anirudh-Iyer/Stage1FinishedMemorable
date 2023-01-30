@@ -1,0 +1,85 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+#signInBoxP {
+  background-color: azure;
+  width: 80vw;
+  height: 75vh;
+  margin-left: 10vw;
+  border-color: white;
+  border-radius: 10px;
+  margin-top: -6%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+#signInBox{
+  display: none;
+}
+#right-edge{
+  width: 0;
+  height: 0;
+  border-left: 30vw solid red;
+  border-bottom: 30vw solid transparent;
+  z-index: -1;
+}
+#left-edge{
+  width: 0;
+  height: 0;
+  border-right: 30vw solid red;
+  border-top: 30vw solid transparent;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+}
+#welcome{
+  position: absolute;
+  margin-top: 4%;
+  font-size: 10vw;
+  width: 70vw;
+  text-align: center;
+  font-family: 'Rochester';
+}
+#line1{
+  width: 30vw;
+  height: 0.2vh;
+  background-color: black;
+  margin-top: 3.5%;
+  position: absolute;
+}
+#line2{
+  width: 30vw;
+  height: 0.2vh;
+  background-color: black;
+  margin-top: 20vh;
+  position: absolute;
+}
+.input_text{
+  position: absolute;
+  width: 60vw;
+  height: 7vh;
+  margin-top: 25vh;
+  font-size: 2.2vh;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background-color: azure;
+  border-bottom: solid;
+  border-bottom-width: 1px;
+  font-family: 'tienne'
+}
+.enter{
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 3vh;
+  margin-top: 60vh;
+  margin-left: -2vw;
+  width: 30vw;
+  height: 7vh;
+  cursor: pointer;
+  font-family: 'spirax';
+}

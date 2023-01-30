@@ -1,0 +1,67 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	display: grid;
+	grid-template-columns: auto;
+	justify-content: center;
+}
+#head {
+	font-family: 'Annie Use Your Telescope', cursive;
+	font-size: 5vw;
+	text-align: center;
+}
+#entry {
+	width: 70vw;
+	height: 30vh;
+	background-color: azure;
+	margin-top: -24vh;
+	max-height: 30vh;
+	overflow: scroll;
+	font-family: 'Abel', sans-serif;
+}
+#submit {
+	border: none;
+	background-color: rgba(0, 0, 255, 0.2);
+	border-radius: 3px;
+	width: 9vw;
+	height: 6vh;
+	font-size: 1.2vw;
+	margin-left: 30.5vw;
+	margin-top: 3vh;
+	cursor: pointer;
+}
+#name {
+	position: absolute;
+	width: 70vw;
+	height: 5vh;
+	background-color: azure;
+	margin-top: -30vh;
+	border: none;
+	font-size: 3vh;
+	text-align: center;
+	font-family: 'Abel', sans-serif;
+}
+::-webkit-scrollbar {
+	width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: black;
+}
+#reviews {
+	position: absolute;
+	width: 70vw;
+	margin-top: 30vh;
+	font-family: 'Tienne', cursive;
+}
+.para1{
+	text-align: right;
+}
+#move {
+	position: absolute;
+	width: 13vw;
+	height: 3px;
+	background-color: black;
+	margin-top: 6%;
+	margin-left: 28.5%;
+}

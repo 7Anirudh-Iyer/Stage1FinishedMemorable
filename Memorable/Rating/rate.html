@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title>Add a Rating | Memorable</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+	    <link rel="preconnect" href="https://fonts.googleapis.com">
+	    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	    <link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Rochester&family=Abel&family=Spirax&family=Tienne&display=swap" rel="stylesheet">
+	    <link rel="icon" type="image/x-icon" href="../favicon.png.png">
+	    <script>
+	      const firebaseConfig = {
+	        apiKey: "AIzaSyCNePrUJkKixB2bMhPvfHpDabmUcspKQzc",
+	        authDomain: "evernote-cc43d.firebaseapp.com",
+	        databaseURL: "https://evernote-cc43d-default-rtdb.firebaseio.com",
+	        projectId: "evernote-cc43d",
+	        storageBucket: "evernote-cc43d.appspot.com",
+	        messagingSenderId: "208113243232",
+	        appId: "1:208113243232:web:2d56f53e23be0c5adc1f05"
+	      };
+	      
+	      firebase.initializeApp(firebaseConfig);
+	    </script>
+	    <script type="text/javascript" src="rate.js" defer></script>
+	    <link rel="stylesheet" id="styler" href="phone.css" />
+	</head>
+	<body>
+		<h1 id="head">Reviews</h1>
+		<div id="write">
+			<div id="name" title="Enter your name" contenteditable="true"></div>
+			<div id="entry" contenteditable="true" title="Enter your review"></div>
+			<input type="button" value="Submit" id="submit"/>
+			<div id="reviews"></div>
+			<div id="move"></div>
+		</div>
+	</body>
+</html>

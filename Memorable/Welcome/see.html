@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<title>Memorable</title>
+		<link rel="stylesheet" id="styler" href="phone.css">
+		<script src="see.js" defer></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Arima+Madurai:wght@500&family=Grand+Hotel&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+		<link rel="icon" type="image/x-icon" href="../favicon.png.png">
+	</head>
+	<body>
+		<img src="sides.jpg" class="decor1" />
+		<div class="decor"></div>
+		<img src="sides.jpg" class="decor1" style="bottom: 0; right: 0; transform: rotateZ(0deg);"/>
+		<div class="decor" style="bottom: 0; right: 0; transform: rotateZ(0deg);"></div>
+		<div id="main">
+			<p id="header">Memorable</p>
+			<img src="logo.jpg" id="logo"/>
+		</div>
+		<div id="about">
+			<p id="a">About Memorable</p>
+			<p id="a1">Memorable was created as a learning project by Anirudh Iyer. The intent was merely to improve proficiency in programming. However, as the project developed, several real usecases were discovered and... Memorable was born. <br><br>Starting with the simplistic user interface and seamless note-taking experience, to dark mode and AI integration, Memorable is fully equipped for all your needs.</p>
+			<img src="Sample.png" id="show" />
+		</div>
+		<div id="features">
+			<div class="feature" id="dark mode">
+				<img src="dark mode.png" class="svg" />
+				<p class="svtext">Are you a vampire like me and can't stand light mode? Switch to our cool dark mode with just one press.</p>
+			</div>
+			<div class="feature" id="ai">
+				<img src="ai.png" class="svg" title="Credit to ai.kizzles.dev for text generator" />
+				<p class="svtext">At a loss for ideas? No problem. With Memorable's integrated AI, we offer all the encouragement you can possibly need.</p>
+			</div>
+			<div class="feature" id="browser">
+				<img src="browse.png" class="svg" />
+				<p class="svtext">Wish to check up on some facts? No need to open google. Access with yet another handy button.</p>
+			</div>
+		</div>
+		<input type="button" value="Sign In!" id="e" onclick="(function(){ location.href='../SignInPage/signIn.html';})()">
+		<div id="download">
+			<input type="button" value="Reviews" title="View Reviews or Submit a Review yourself" id="d" onclick="(function(){ location.href='../Rating/rate.html';})()">
+		</div>
+		<script type="text/javascript" src="Welcome.js"></script>
+	</body>
+</html>

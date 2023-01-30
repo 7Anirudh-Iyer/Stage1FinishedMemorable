@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <title>Sign In</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../firebase-app.js"></script>
+    <script src="../firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js" integrity="sha512-Zq9o+E00xhhR/7vJ49mxFNJ0KQw1E1TMWkPTxrWcnpfEFDEXgUiwJHIKit93EW/XxE31HSI5GEOW06G6BF1AtA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.css" integrity="sha512-DIW4FkYTOxjCqRt7oS9BFO+nVOwDL4bzukDyDtMO7crjUZhwpyrWBFroq+IqRe6VnJkTpRAS6nhDvf0w+wHmxg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css" integrity="sha512-O03ntXoVqaGUTAeAmvQ2YSzkCvclZEcPQu1eqloPaHfJ5RuNGiS4l+3duaidD801P50J28EHyonCV06CUlTSag==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.js" integrity="sha512-OmBbzhZ6lgh87tQFDVBHtwfi6MS9raGmNvUNTjDIBb/cgv707v9OuBVpsN6tVVTLOehRFns+o14Nd0/If0lE/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/x-icon" href="../favicon.png.png">
+    <link href="https://fonts.googleapis.com/css2?family=Rochester&family=BenchNine&family=Work-Sans&display=swap" rel="stylesheet">
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyCNePrUJkKixB2bMhPvfHpDabmUcspKQzc",
+        authDomain: "evernote-cc43d.firebaseapp.com",
+        databaseURL: "https://evernote-cc43d-default-rtdb.firebaseio.com",
+        projectId: "evernote-cc43d",
+        storageBucket: "evernote-cc43d.appspot.com",
+        messagingSenderId: "208113243232",
+        appId: "1:208113243232:web:2d56f53e23be0c5adc1f05"
+      };
+      
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <link rel="stylesheet" id="styler" href="phone.css">
+  </head>
+  <body>
+    <img src="sides.jpg" class="decor1" />
+		<div class="decor"></div>
+		<img src="sides.jpg" class="decor1" style="bottom: 0; right: 0; transform: rotateZ(0deg);"/>
+		<div class="decor" style="bottom: 0; right: 0; transform: rotateZ(0deg);"></div>
+    <div id="signInBoxP">
+      <h2 id="welcome">Welcome to Memorable<br>
+        <span style="text-align: center; font-size: 3.5vh;">Sign in here</span>
+      </h2>
+      <input type="text" placeholder="Enter name" id="nameP" class="input_text"/>
+      <input type="email" placeholder="Enter email" id="emailP" style="margin-top: 35vh;" class="input_text"/>
+      <input type="password" placeholder="Enter password" id="passwordP" style="margin-top: 45vh;" class="input_text"/>
+      <input type="button" class="enter" id="signupP" value="Sign up"/>
+      <input type="button" class="enter" id="signinP" style="margin-left: 4vw" value="Sign in"/>
+    </div>
+    <div id="centerit">
+      <div id="signInBox">
+        <p id="login">Log In</p>
+        <input type="email" placeholder="Enter email" id="email" style="margin-top: 5vh;" class="input_text"/>
+        <input type="password" placeholder="Enter password" id="password" style="margin-top: 15vh;" class="input_text"/>
+        <p id="why-not">Fill in details above</p>
+        <input type="button" class="enter" id="signup" value="Sign up"/>
+        <input type="button" class="enter" id="signin" value="Log in"/>
+      </div>
+    </div>
+    <div id="carousel">
+      <div id="slide1">
+        <img src="hello.svg" class="icon1" />
+        <p class="icon_text">New here? No problem. Fill in the details (email and password) and click on Sign Up to create your account with Memorable!</p>
+      </div>
+      <div id="slide2">
+        <img src="login.svg" class="icon1" />
+        <p class="icon_text">Looking to Login? Fill in the details as usual and click on Log In. You really should know that by now!</p>
+      </div>
+    </div>
+    <div id="changeto1"></div>
+    <div id="changeto2"></div>
+    <script src="sketch.js"></script>
+  </body>
+</html>
